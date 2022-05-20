@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Field
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  image: {fileID: 21300000, guid: 539274c45387ea243bb6b771a05a864a, type: 3}
+  image: {fileID: 21300000, guid: 3f0275255fe894c47823b6b9c6054326, type: 3}
   price: 500
   title: Field
+  description: Field for growing vegetables. They say you can even grow a spirit...

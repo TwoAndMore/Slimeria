@@ -1,20 +1,19 @@
-using System;
 using UnityEngine;
 
 public class ActivateBuilding : MonoBehaviour
 {
     private const string PLAYERTAG = "Player";
     private const KeyCode ACTIVATE = KeyCode.F;
+    
     [SerializeField] private GameObject _pressButton;
-
+    [SerializeField] private GameObject _buildingUI;
+    
     private bool _inRange;
 
     private void Update()
     {
-        if (_inRange && Input.GetKeyDown(ACTIVATE))
-        {
-             
-        }
+        if (_inRange && Input.GetKeyDown(ACTIVATE)) 
+            _buildingUI.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -32,5 +31,6 @@ public class ActivateBuilding : MonoBehaviour
             return;
         _inRange = false;
         _pressButton.SetActive(false);
+        _buildingUI.SetActive(false);
     }
 }
